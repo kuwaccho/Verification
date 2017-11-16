@@ -68,10 +68,10 @@ public enum Pref {
 	}
 
 	public static Pref getByCode(String code) {
-		return Arrays.stream(values()).filter(s -> s.getCode() == code).findFirst().orElse(null);
+		return Arrays.stream(values()).filter(s -> s.getCode().equals(code)).findFirst().orElse(null);
 	}
 
 	public static Pref getByName(String name) {
-		return Arrays.stream(values()).filter(s -> s.getName() == name).findFirst().orElse(null);
+		return Arrays.stream(values()).filter(s -> s.getName().equals(name)).findFirst().orElse(null);
 	}
 }
